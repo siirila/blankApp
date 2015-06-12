@@ -1,0 +1,37 @@
+<%= form_for(@api_v1_comment) do |f| %>
+  <% if @api_v1_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@api_v1_comment.errors.count, "error") %> prohibited this api_v1_comment from being saved:</h2>
+
+      <ul>
+      <% @api_v1_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :site_id %><br>
+    <%= f.text_field :site_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br>
+    <%= f.text_field :memo %>
+  </div>
+  <div class="field">
+    <%= f.label :alternatives %><br>
+    <%= f.text_field :alternatives %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
