@@ -5,6 +5,11 @@ class Api::V1::SitesController < ApplicationController
   # GET /api/v1/sites.json
   def index
     @api_v1_sites = Api::V1::Site.all
+
+    respond_to do |format|
+      format.html
+      format.json   { render :json => @api_v1_sites }
+    end
   end
 
   # GET /api/v1/sites/1
