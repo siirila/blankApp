@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Api V1 Sites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_v1_sites.each do |api_v1_site| %>
+      <tr>
+        <td><%= api_v1_site.url %></td>
+        <td><%= link_to 'Show', api_v1_site %></td>
+        <td><%= link_to 'Edit', edit_api_v1_site_path(api_v1_site) %></td>
+        <td><%= link_to 'Destroy', api_v1_site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Site', new_api_v1_site_path %>
