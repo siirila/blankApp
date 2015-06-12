@@ -15,6 +15,11 @@ class Api::V1::CommentsController < ApplicationController
   # GET /api/v1/comments/new
   def new
     @api_v1_comment = Api::V1::Comment.new
+
+    respond_to do |format|
+      format.html
+      format.json   { render :json => @api_v1_comment }
+    end
   end
 
   # GET /api/v1/comments/1/edit
