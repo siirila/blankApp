@@ -20,6 +20,11 @@ class Api::V1::SitesController < ApplicationController
   # GET /api/v1/sites/new
   def new
     @api_v1_site = Api::V1::Site.new
+
+    respond_to do |format|
+      format.html
+      format.json   { render :json => @api_v1_site }
+    end
   end
 
   # GET /api/v1/sites/1/edit
