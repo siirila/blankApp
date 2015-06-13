@@ -7,9 +7,12 @@ div{
     height: 100%;
     background: black;
     position: absolute;
+    font-size: 30px;
+    color: black;
+    text-align: center;
     top: 0;
     left: 0;
-    z-index:1;
+    // z-index:1;
 }
 label.btn {
     position: absolute;
@@ -27,7 +30,9 @@ input[type="checkbox"]{
     display: none;
 }
 input[type="checkbox"]:checked + div{
-    background: white;
+  background-image: url('/images/blue-hole.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 label + input[type="checkbox"]:checked{
     background: white;
