@@ -8,7 +8,7 @@ window.toggle = ->
   if blind
     blind = false
     $('.hos').fadeToggle(2000)
-    setTimeout((-> $('.sig').toggle()), 2000)
+    setTimeout((-> $('.sig').toggle()), 1800)
   else
     blind = true
     $('.sig').toggle()
