@@ -4,12 +4,22 @@ body {
 
 .blank {
   background-size:cover;
-  background-image: url('/ari2011.jpg');
+  background-image: url('/try1.jpg');
 }
 
 
 h1 {
   color: #000;
+}
+
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 30%);
 }
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
