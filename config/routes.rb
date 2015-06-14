@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
+  root 'home#index'
+
+=======
   resources :issues
   resources :hosts
+>>>>>>> 032239437bd9ea615379a0c5d11e246497d22409
   namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
       resources :sites do
