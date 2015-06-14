@@ -1,0 +1,26 @@
+<% @hosts.each do |host| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4><%= host.url %></h4>
+    </div>
+    <div class="panel-body">
+      <% host.paths.each do |path| %>
+        <a href="<%= "#{host.url}#{path.path}" %>">
+          <%= truncate "#{host.url}#{path.path}" %>
+        </a>
+        <table class="table table-bordered">
+          <% path.issues.each do |issue| %>
+            <tr>
+              <td>
+                <div class="row">
+                  <div class="col-sm-9"><%= issue.message %></div>
+                  <div class="col-sm-3 pull-right"><%= time_ago_in_words issue.timestamp %> ago</div>
+                </div>
+              </td>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+    </div>
+  </div>
+<% end %>
