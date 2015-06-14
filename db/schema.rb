@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150612120643) do
+ActiveRecord::Schema.define(version: 20150613155635) do
 
   create_table "api_v1_comments", force: :cascade do |t|
     t.string   "user"
@@ -30,5 +30,25 @@ ActiveRecord::Schema.define(version: 20150612120643) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "hosts", force: :cascade do |t|
+    t.string "url", null: false
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.integer  "user_id",   null: false
+    t.integer  "path_id"
+    t.datetime "timestamp"
+    t.text     "message"
+  end
+
+  add_index "issues", ["path_id"], name: "index_issues_on_path_id"
+
+  create_table "paths", force: :cascade do |t|
+    t.integer "host_id"
+    t.string  "path",    null: false
+  end
+
+  add_index "paths", ["host_id"], name: "index_paths_on_host_id"
 
 end

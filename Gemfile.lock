@@ -37,7 +37,11 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+<<<<<<< HEAD
     autoprefixer-rails (5.1.8)
+=======
+    autoprefixer-rails (5.2.0)
+>>>>>>> 032239437bd9ea615379a0c5d11e246497d22409
       execjs
       json
     binding_of_caller (0.7.2)
@@ -81,6 +85,7 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     rack (1.6.1)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.1)
@@ -152,6 +157,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  rack-cors
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

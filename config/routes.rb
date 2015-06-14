@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   root 'home#index'
 
+=======
+  resources :issues
+  resources :hosts
+>>>>>>> 032239437bd9ea615379a0c5d11e246497d22409
   namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
       resources :sites do
@@ -9,11 +14,12 @@ Rails.application.routes.draw do
       end
     end
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'hosts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
