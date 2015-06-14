@@ -1,15 +1,22 @@
 body {
-  background-color: #000 !important;
+  /*background-color: #000 !important;*/
+  background-image: url('/try1.jpg');
+  background-size:cover;
 }
 
 .blank {
-  background-size:cover;
-  background-image: url('/try1.jpg');
+ 
+  
 }
 
 
 h1 {
   color: #000;
+}
+
+.hos {
+  background-color: #000;
+  height: 100vh;
 }
 
 .parent {
